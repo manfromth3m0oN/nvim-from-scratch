@@ -8,17 +8,17 @@ vim.api.nvim_set_keymap("n", "L", ":bnext<CR>", {})
 local wk = require("which-key")
 
 wk.register({
+  g = {
+    name = "Goto", -- optional group name
+    d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Goto definition" }, 
+    i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Goto Implementation" },
+    c = { "<cmd>lua vim.lsp.buf.incoming_calls()<CR>", "Goto Incoming calls" },
+    t = { "<cmd>lua vim.lsp.buf.type_definition()<CR>", "Goto Typedef" },
+    r = { "<cmd>lua vim.lsp.buf.references()<CR>", "Goto References" },
+    h = { "<cmd>Lspsaga lsp_finder<CR>", "Show LSP Finder" },
+  },
   ["<leader>"] = {
     e = { ":NvimTreeToggle<CR>", "Open Tree" },
-    g = {
-      name = "Goto", -- optional group name
-      d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Goto definition" }, 
-      i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Goto Implementation" },
-      c = { "<cmd>lua vim.lsp.buf.incoming_calls()<CR>", "Goto Incoming calls" },
-      t = { "<cmd>lua vim.lsp.buf.type_definition()<CR>", "Goto Typedef" },
-      r = { "<cmd>lua vim.lsp.buf.references()<CR>", "Goto References" },
-      h = { "<cmd>Lspsaga lsp_finder<CR>", "Show LSP Finder" },
-    },
     s = {
       name = "Show Symbols",
       d = { "<cmd>lua vim.lsp.buf.document_symbol()<CR>", "Document" },

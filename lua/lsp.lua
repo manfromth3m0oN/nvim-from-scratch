@@ -1,5 +1,5 @@
 require("mason-lspconfig").setup({
-    ensure_installed = { "sumneko_lua", "rust_analyzer", "gopls", "golangci_lint_ls", "jsonls", "pyright", "taplo", "zls" }
+    ensure_installed = { "sumneko_lua", "rust_analyzer", "gopls", "golangci_lint_ls", "jsonls", "pyright", "taplo", "zls", "vale" }
 })
 
 require('lint').linters_by_ft = {
