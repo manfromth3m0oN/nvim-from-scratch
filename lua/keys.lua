@@ -48,5 +48,9 @@ wk.register({
     b = { "<cmd>Telescope buffers<cr>", "Find Buffers"},
     h = { "<cmd>Telescope help_tags<cr>", "Help Tags"},
   },
+  g = {
+	  name = "Git",
+	  b = {"<cmd>GitBlameToggle<cr>", "Toggle Git Blame"},
+  }
   },
 })

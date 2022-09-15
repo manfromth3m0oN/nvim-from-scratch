@@ -58,6 +58,8 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-dap'
   use 'onsails/lspkind.nvim'
   use 'folke/which-key.nvim'
+  use 'f-person/git-blame.nvim'
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
   use {
     'karb94/neoscroll.nvim',
      config = function()
