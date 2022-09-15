@@ -39,7 +39,7 @@ wk.register({
   },
   b = {
     name = "Buffer",
-    d = { ":bdelete<CR>", "Delete buffer"},
+    d = { "<cmd>NvimTreeClose<CR><cmd>bdelete<CR>", "Delete buffer"},
   },
   f = {
     name = "Telescope",
@@ -51,6 +51,7 @@ wk.register({
   g = {
 	  name = "Git",
 	  b = {"<cmd>GitBlameToggle<cr>", "Toggle Git Blame"},
+	  o = {"<cmd>Neogit<cr>"},
   }
   },
 })
