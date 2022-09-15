@@ -51,7 +51,7 @@ wk.register({
   g = {
 	  name = "Git",
 	  b = {"<cmd>GitBlameToggle<cr>", "Toggle Git Blame"},
-	  o = {"<cmd>Neogit<cr>"},
+	  o = {"<cmd>Neogit<cr>", "Open neogit"},
   }
   },
 })
