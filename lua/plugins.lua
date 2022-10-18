@@ -39,6 +39,12 @@ packer.init {
 }
 
 return require('packer').startup(function(use)
+  use {
+	'xolox/vim-notes',
+	requires = {
+		'xolox/vim-misc'
+	}
+  }
   use 'wbthomason/packer.nvim'
   use 'windwp/windline.nvim'
   use "EdenEast/nightfox.nvim"
@@ -58,6 +64,41 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-dap'
   use 'onsails/lspkind.nvim'
   use 'folke/which-key.nvim'
+  use 'simrat39/rust-tools.nvim'
+use 'nvim-lua/plenary.nvim'
+use 'mfussenegger/nvim-dap'
+use {
+  "folke/todo-comments.nvim",
+  requires = "nvim-lua/plenary.nvim",
+  config = function()
+    require("todo-comments").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
+  use {
+	  'jose-elias-alvarez/null-ls.nvim',
+	  config = function()
+	      require("null-ls").setup({
+	        sources = {
+		  require("null-ls").builtins.formatting.stylua,
+		  require("null-ls").builtins.diagnostics.eslint,
+		  require("null-ls").builtins.completion.spell,
+		  require("null-ls").builtins.diagnostics.golangci_lint,
+		  require("null-ls").builtins.formatting.goimports_reviser,
+		  require("null-ls").builtins.formatting.golines,
+		  require("null-ls").builtins.code_actions.gitsigns,
+		  require("null-ls").builtins.code_actions.shellcheck,
+		  require("null-ls").builtins.diagnostics.checkmake,
+	        },
+	     })
+	  end,
+   requires = {
+    'nvim-lua/plenary.nvim'
+   }
+  }
   use 'f-person/git-blame.nvim'
   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
   use {
@@ -95,15 +136,6 @@ return require('packer').startup(function(use)
     end,
   })
   use 'leoluz/nvim-dap-go'
-  use {
-   'jose-elias-alvarez/null-ls.nvim',
-   config = function()
-        require("null-ls").setup()
-    end,
-   requires = {
-    'nvim-lua/plenary.nvim'
-   }
-  }
   use {
   'kyazdani42/nvim-tree.lua',
    requires = {

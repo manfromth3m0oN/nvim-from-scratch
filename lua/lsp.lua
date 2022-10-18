@@ -26,6 +26,7 @@ require("mason").setup({
 require("lsp-format").setup {}
 require "lspconfig".gopls.setup { on_attach = require "lsp-format".on_attach } 
 require "lspconfig".rust_analyzer.setup { on_attach = require "lsp-format".on_attach } 
+require "lspconfig".zls.setup { on_attach = require "lsp-format".on_attach } 
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)

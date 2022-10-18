@@ -52,6 +52,13 @@ wk.register({
 	  name = "Git",
 	  b = {"<cmd>GitBlameToggle<cr>", "Toggle Git Blame"},
 	  o = {"<cmd>Neogit<cr>", "Open neogit"},
+  },
+  n = {
+	  name = "Notes",
+	  n = { "<cmd>tabe<cr><cmd>Note<cr>", "New Note"},
+	  d = { "<cmd>DeleteNote<cr>", "Delete Note"},
+	  t = { "<cmd>TabNoteFromSelectedText<cr>", "Note from selection"},
+	  r = { "<cmd>RecentNotes<cr>", "Recent notes"},
   }
   },
 })
